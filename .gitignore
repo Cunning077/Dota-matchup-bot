@@ -1,0 +1,7 @@
+# Python
+.venv/
+env*/
+.env
+.slack/
+__pycache__/
+*.pyc

@@ -1,0 +1,14 @@
+beautifulsoup4==4.15.0
+certifi==2026.7.22
+charset-normalizer==3.5.2
+dotenv==0.9.9
+idna==3.20
+packaging==26.3
+python-dotenv==1.2.4
+requests==2.34.2
+slack_bolt==1.30.0
+slack_cli_hooks==0.3.0
+slack_sdk==3.44.1
+soupsieve==2.10
+typing_extensions==4.16.0
+urllib3==2.8.0
