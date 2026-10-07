@@ -53,29 +53,6 @@ def startMatch(ack, body, say):
     say("List relevant info in this format:\n"
     "'postion, draft order, [enemy1, enemy2, etc]'")
 
-def recmatchtester():
-    match_info = "Safelane, 4, [lina, luna]"
-    Pos, draftOrder, enemyPack = Serv.parse_mI(match_info)
-    heroes = enemyPack.split(",")
-    heroes[0] = heroes[0].strip().strip("[")
-    heroes[-1] = heroes[-1].strip().strip(']')
-    
-    matchSession = {}
-    for hero in heroes:
-        print(hero)
-        matchSession[hero] = {}
-        matchups = pullHeroData(hero)
-        winrates = Serv.calc_winrate(matchups)
-        matchSession[hero]['winrate'] = winrates
-
-    averages = Serv.calc_avgs(matchSession)
-    best_picks = Serv.find_bestPick(averages)
-        
-@app.message("t")
-def run_test(message, say):
-    print('test')
-    recmatchtester()
-
 @app.message("")
 def receive_match_info(message, say):
     user_id = message['user']
